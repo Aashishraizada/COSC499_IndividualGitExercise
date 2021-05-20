@@ -27,14 +27,16 @@ public class ArraySort {
 			for(int i = 0; i < length; i++) {
 				list[i] = in.next();
 			}
-			//sortStringArray(list);
+			//sort the list
+
 		}
 		else if(type == 2) {
 			int list[] = new int[length];
 			for(int i = 0; i < length; i++) {
 				list[i] = in.nextInt();
 			}
-			//sortIntArray(list);
+			//sort the list
+			
 		}
 		
 		in.close();
