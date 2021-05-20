@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ArraySort {
 
 	public static void main(String[] args) {
-		int type, length; //data type and the list length
+		int type, length; //data type
 		
 		System.out.print("Choose from the data types below\nEnter 1 for String\nEnter 2 for Integer\nSelect a data type: ");
 		Scanner in = new Scanner(System.in);
