@@ -36,16 +36,23 @@ public class ArraySort {
 				list[i] = in.nextInt();
 			}
 			//sort the list
-			sortIntArray(list);
+			int[] sortedList = sortIntArray(list);
+			printSortedIntArray(sortedList);
+			if(testIntSort()) {
+				System.out.println("Integer Sort test successful!");
+			}
+			else {
+				System.out.println("Integer Sort test failed!");
+			}
 		}
 		
 		in.close();
 	}
 
-	public static void sortIntArray(int[] list) {
+	public static int[] sortIntArray(int[] list) {
 		int[] sortedList = Arrays.copyOf(list, list.length);
 		Arrays.sort(sortedList);
-		printSortedIntArray(sortedList);
+		return sortedList;
 	}
 	
 	public static void printSortedIntArray(int[] sortedList) {
@@ -53,6 +60,14 @@ public class ArraySort {
 		for(int i = 0; i < sortedList.length; i++) {
 			System.out.print(sortedList[i] + " ");
 		}
+		System.out.println();
+	}
+	
+	public static boolean testIntSort() {
+		int[] givenList = {5, 9, 4, 5, 8};
+		int[] expectedList = {4, 5, 5, 8, 9};
+		int[] resultList = sortIntArray(givenList);
+		return Arrays.equals(expectedList, resultList);
 	}
 
 }
