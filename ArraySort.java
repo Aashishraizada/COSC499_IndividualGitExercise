@@ -36,8 +36,23 @@ public class ArraySort {
 				list[i] = in.nextInt();
 			}
 			//sort the list
+			sortIntArray(list);
 		}
 		
 		in.close();
 	}
+
+	public static void sortIntArray(int[] list) {
+		int[] sortedList = Arrays.copyOf(list, list.length);
+		Arrays.sort(sortedList);
+		printSortedIntArray(sortedList);
+	}
+	
+	public static void printSortedIntArray(int[] sortedList) {
+		System.out.print("The sorted list: ");
+		for(int i = 0; i < sortedList.length; i++) {
+			System.out.print(sortedList[i] + " ");
+		}
+	}
+
 }
