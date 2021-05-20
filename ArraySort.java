@@ -29,6 +29,7 @@ public class ArraySort {
 				list[i] = in.next();
 			}
 			//sort the list
+			sortStringArray(list);
 		}
 		else if(type == 2) {
 			int list[] = new int[length];
@@ -40,4 +41,18 @@ public class ArraySort {
 		
 		in.close();
 	}
+
+	public static void sortStringArray(String[] list) {
+		String[] sortedList = Arrays.copyOf(list, list.length);
+		Arrays.sort(sortedList);
+		printSortedStringArray(sortedList);
+	}
+	
+	public static void printSortedStringArray(String[] sortedList) {
+		System.out.print("The sorted list: ");
+		for(int i = 0; i < sortedList.length; i++) {
+			System.out.print(sortedList[i] + " ");
+		}
+	}
+
 }
