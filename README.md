@@ -1,4 +1,4 @@
-# COSC499_IndividualGitExercise
+# COSC499-IndividualGitExercise
 
 ***This program allows the users to sort a list of elements.***
 
