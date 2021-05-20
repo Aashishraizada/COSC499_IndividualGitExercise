@@ -28,7 +28,6 @@ public class ArraySort {
 				list[i] = in.next();
 			}
 			//sort the list
-
 		}
 		else if(type == 2) {
 			int list[] = new int[length];
@@ -36,7 +35,6 @@ public class ArraySort {
 				list[i] = in.nextInt();
 			}
 			//sort the list
-			
 		}
 		
 		in.close();
