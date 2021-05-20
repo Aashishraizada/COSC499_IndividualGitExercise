@@ -29,7 +29,14 @@ public class ArraySort {
 				list[i] = in.next();
 			}
 			//sort the list
-			sortStringArray(list);
+			String[] sortedList = sortStringArray(list);
+			printSortedStringArray(sortedList);
+			if(testStringSort()) {
+				System.out.println("String Sort test successful!");
+			}
+			else {
+				System.out.println("String Sort test failed!");
+			}
 		}
 		else if(type == 2) {
 			int list[] = new int[length];
@@ -42,10 +49,10 @@ public class ArraySort {
 		in.close();
 	}
 
-	public static void sortStringArray(String[] list) {
+	public static String[] sortStringArray(String[] list) {
 		String[] sortedList = Arrays.copyOf(list, list.length);
 		Arrays.sort(sortedList);
-		printSortedStringArray(sortedList);
+		return sortedList;
 	}
 	
 	public static void printSortedStringArray(String[] sortedList) {
@@ -53,6 +60,14 @@ public class ArraySort {
 		for(int i = 0; i < sortedList.length; i++) {
 			System.out.print(sortedList[i] + " ");
 		}
+		System.out.println();
+	}
+	
+	public static boolean testStringSort() {
+		String[] givenList = {"f", "fsh", "asa", "aav", "cla"};
+		String[] expectedList = {"aav", "asa", "cla", "f", "fsh"};
+		String[] resultList = sortStringArray(givenList);
+		return Arrays.equals(expectedList, resultList);
 	}
 
 }
